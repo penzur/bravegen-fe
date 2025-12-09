@@ -9,3 +9,4 @@ type FAIconProps = {
 export function FAIcon({ icon, className }: FAIconProps) {
   return <FontAwesomeIcon icon={icon} className={className} />
 }
+

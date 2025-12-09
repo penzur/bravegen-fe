@@ -1,3 +1,4 @@
+import Dashboard from "~/components/layout/dashboard";
 import type { Route } from "./+types/home";
 
 export function meta({ }: Route.MetaArgs) {
@@ -8,5 +9,7 @@ export function meta({ }: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <h1>Hello</h1>
+  return <Dashboard>
+    <h1>home</h1>
+  </Dashboard>
 }
