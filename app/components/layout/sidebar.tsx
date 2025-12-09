@@ -1,5 +1,5 @@
-import { Link } from "react-router"
-import { FAIcon } from "../icons/fa"
+import { NavLink } from 'react-router'
+import { FAIcon } from '../icons/fa'
 import {
   faSun,
   faCompass,
@@ -9,36 +9,35 @@ import {
   faClipboard,
   faFolderOpen,
   faHandScissors,
-} from "@fortawesome/free-regular-svg-icons"
-
-const navItems = [
-  { to: '/insights', icon: faCompass, label: 'Insights' },
-  { to: '/collect', icon: faFolderOpen, label: 'Collect' },
-  { to: '/reviews', icon: faThumbsUp, label: 'Reviews' },
-  { to: '/carbon', icon: faSnowflake, label: 'Carbon' },
-  { to: '/reports', icon: faFileLines, label: 'Reports' },
-  { to: '/utilities', icon: faHandScissors, label: 'Utilities' },
-  { to: '/actions', icon: faClipboard, label: 'Actions' },
-]
+} from '@fortawesome/free-regular-svg-icons'
+import { mainNav } from '~/config/nav'
 
 export default function Sidebar() {
-  return <aside className="bg-[#1B212B] text-[#E7E8E9] w-12 h-screen flex flex-col justify-between items-center gap-4">
-    <Link to="/" className="logo w-full min-h-12 flex items-center justify-center mt-2">
-      <img src="/images/logo.png" className="h-9" />
-    </Link>
+  return <aside className="bg-[#1B212B] text-[#E7E8E9] w-14 h-screen flex flex-col justify-between items-center gap-4">
+    <NavLink to="/" className="logo w-full min-h-12 flex items-center justify-center mt-2">
+      <img src="/images/logo.png" className="h-10" />
+    </NavLink>
 
     <nav className="flex-1 flex flex-col justify-center items-center w-full gap-4">
       {
-        navItems.map(n => <Link to={n.to} className="flex flex-col hover:text-[#598651] items-center justify-center gap-1">
+        mainNav.map(n => <NavLink
+          to={n.path}
+          className={({ isActive }) => (
+            `${isActive ? 'text-[#598651] ' : ''}flex flex-col hover:text-[#598651] items-center justify-center mb-2`
+          )}>
           <FAIcon icon={n.icon} className="h-5! w-5!" />
           <span className="text-[10px]">{n.label}</span>
-        </Link>)
+        </NavLink>)
       }
     </nav>
 
-    <Link to="/settings/integrations" className="flex flex-col hover:text-[#598651] items-center justify-center gap-1 mb-2">
+    <NavLink
+      to="/settings/integrations"
+      className={({ isActive }) => (
+        `${isActive ? 'text-[#598651] ' : ''}flex flex-col hover:text-[#598651] items-center justify-center mb-2`
+      )}>
       <FAIcon icon={faSun} className="h-5! w-5!" />
       <span className="text-[10px]">Settings</span>
-    </Link>
+    </NavLink>
   </aside>
 }
