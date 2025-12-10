@@ -22,7 +22,7 @@ export function Pagination({
       }
     }
 
-    return pages.map((page, index) => {
+    return pages.map((page) => {
       return (
         <button
           key={page}
@@ -39,11 +39,11 @@ export function Pagination({
   }
 
   return (
-    <div className='flex items-center justify-center gap-2 px-6 py-4 border-t border-gray-200'>
+    <div className='flex items-center justify-center gap-2 px-6 py-4 border-t border-gray-200 font-medium'>
       <button
         onClick={() => onPageChange(Math.max(1, currentPage - 1))}
         disabled={currentPage === 1}
-        className='cursor-pointter px-3 py-1 text-sm text-gray-600 hover:text-gray-900 disabled:text-gray-400 disabled:cursor-not-allowed'
+        className='cursor-pointer px-3 py-1 text-sm text-gray-600 hover:text-gray-900 disabled:text-gray-400 disabled:cursor-not-allowed'
       >
         ← Previous
       </button>

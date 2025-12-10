@@ -44,7 +44,7 @@ export function TableHead({ children, className = '' }: { children: React.ReactN
 
 export function TableCell({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <td className={`px-6 py-2 whitespace-nowrap text-sm ${className}`}>
+    <td className={`px-3 py-2 whitespace-nowrap text-sm ${className}`}>
       {children}
     </td>
   )

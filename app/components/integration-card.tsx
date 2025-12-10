@@ -3,7 +3,7 @@ export function IntegrationCard({ name, icon, description, iconBg = 'bg-blue-500
   return (
     <div className='bg-[#EFEFEF] rounded-lg border border-gray-200 p-6 hover:shadow-sm transition-shadow'>
       <div className='flex items-center gap-3 mb-3'>
-        <div className={`w-10 h-10 ${iconBg} rounded flex items-center justify-center flex-shrink-0`}>
+        <div className={`w-10 h-10 rounded flex items-center justify-center flex-shrink-0`}>
           <img src={icon} />
         </div>
         <h3 className='text-base font-medium text-gray-900'>{name}</h3>

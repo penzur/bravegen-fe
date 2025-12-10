@@ -94,6 +94,7 @@ export default function Integrations() {
           <Table>
             <TableHeader>
               <TableRow>
+                <TableHead></TableHead>
                 <TableHead>Integration ↓</TableHead>
                 <TableHead>Name</TableHead>
                 <TableHead>Source</TableHead>
@@ -107,9 +108,11 @@ export default function Integrations() {
             <TableBody>
               {paginatedData.map((row) => (
                 <TableRow key={row.id}>
+                  <TableCell className="pl-4! pr-0! mx-0">
+                    <img src={row.icon} className="w-6 h-6" />
+                  </TableCell>
                   <TableCell>
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl"><img src={row.icon} /></span>
+                    <div className="flex items-center">
                       <span className="text-gray-900">{row.integration}</span>
                     </div>
                   </TableCell>
