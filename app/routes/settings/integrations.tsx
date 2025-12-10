@@ -78,7 +78,7 @@ export default function Integrations() {
         </div>
 
         <div className="mb-6 w-full">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Existing Connections</h2>
+          <h2 className="text-xl font-medium mb-4">Existing Connections</h2>
 
           <div className="relative mb-6">
             <input

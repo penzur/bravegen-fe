@@ -56,7 +56,7 @@ export function NavSectionComponent({ section }: NavSectionProps): React.ReactEl
   return (
     <div className="mb-6">
       {section.title && (
-        <h3 className="px-4 mb-2 text-sm font-semibold text-gray-500 tracking-wider">
+        <h3 className="px-4 mb-2 text-xs font-semibold text-gray-500 tracking-wider">
           {section.title}
         </h3>
       )}
