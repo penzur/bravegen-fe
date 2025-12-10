@@ -86,7 +86,7 @@ export default function Integrations() {
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder='Integration or Name'
-              className="w-full max-w-sm px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-transparent"
+              className="w-full max-w-sm px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none bg-white focus:ring-1 focus:ring-gray-500 focus:border-transparent"
             />
             <FAIcon icon={faSearch} className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
           </div>
@@ -94,7 +94,7 @@ export default function Integrations() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead></TableHead>
+                <TableHead><span></span></TableHead>
                 <TableHead>Integration ↓</TableHead>
                 <TableHead>Name</TableHead>
                 <TableHead>Source</TableHead>

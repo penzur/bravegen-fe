@@ -1,6 +1,7 @@
 import {
   faEye,
   faSun,
+  faHome,
   faClone,
   faCloud,
   faCamera,
@@ -16,6 +17,10 @@ import {
   faRectangleList,
   type IconDefinition,
 } from '@fortawesome/free-regular-svg-icons'
+import {
+  faUsers,
+  faTags,
+} from '@fortawesome/free-solid-svg-icons'
 
 export interface Nav {
   path: string
@@ -36,9 +41,9 @@ export const mainNav: Array<Nav> = [
 
 export const settingsNav: Record<string, Array<Nav>> = {
   Organisation: [
-    { path: '/manage', label: 'Manage', icon: faClone },
-    { path: '/users', label: 'Users', icon: faClone },
-    { path: '/tags', label: 'Tags', icon: faClone },
+    { path: '/manage', label: 'Manage', icon: faHome },
+    { path: '/users', label: 'Users', icon: faUsers },
+    { path: '/tags', label: 'Tags', icon: faTags },
     { path: '/settings/integrations', label: 'Integrations', icon: faClone },
   ],
   Utilities: [
