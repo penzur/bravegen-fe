@@ -2,13 +2,12 @@ import { FAIcon } from '../icons/fa'
 import { useLocation } from 'react-router'
 import {
   faBell,
-  faCircleDown,
 } from '@fortawesome/free-regular-svg-icons'
 import {
   faQuestion,
   faMagnifyingGlass,
 } from '@fortawesome/free-solid-svg-icons'
-import { getActiveNav, type Nav } from '~/config/nav'
+import { getActiveNav } from '~/config/nav'
 import AccountMenu from '../account-menu'
 import TenantMenu from '../tenant-menu'
 

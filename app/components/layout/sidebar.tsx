@@ -2,13 +2,6 @@ import { NavLink } from 'react-router'
 import { FAIcon } from '../icons/fa'
 import {
   faSun,
-  faCompass,
-  faThumbsUp,
-  faSnowflake,
-  faFileLines,
-  faClipboard,
-  faFolderOpen,
-  faHandScissors,
 } from '@fortawesome/free-regular-svg-icons'
 import { mainNav } from '~/config/nav'
 

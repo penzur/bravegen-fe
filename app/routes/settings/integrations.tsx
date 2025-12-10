@@ -1,5 +1,6 @@
 import Dashboard from '~/components/layout/dashboard'
 import type { Route } from './+types/integrations'
+import SettingsNav from '~/components/settings-nav';
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -10,8 +11,10 @@ export function meta({ }: Route.MetaArgs) {
 
 export default function Integrations() {
   return <Dashboard>
-    <div className="w-full h-full px-8 py-4">
-      <h2 className="text-5xl bold">Integrations</h2>
+    <div className="flex w-full h-full px-8 pt-8 gap-8">
+      <SettingsNav className="w-[256px]!" />
+      <div className="flex-1">
+      </div>
     </div>
   </Dashboard>
 }

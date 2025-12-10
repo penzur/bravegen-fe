@@ -48,7 +48,7 @@ export interface DropdownListItemProps {
   className?: string
 }
 
-export const Dropdown: React.FC<DropdownProps> = ({ children, open, onOpenChange }) => {
+export function Dropdown({ children, open, onOpenChange }: DropdownProps): React.ReactElement {
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -74,7 +74,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ children, open, onOpenChange
   )
 }
 
-export const DropdownTrigger: React.FC<DropdownTriggerProps> = ({ children, onClick }) => {
+export function DropdownTrigger({ children, onClick }: DropdownTriggerProps): React.ReactElement {
   return (
     <div onClick={onClick} className="w-full">
       {children}
@@ -82,7 +82,7 @@ export const DropdownTrigger: React.FC<DropdownTriggerProps> = ({ children, onCl
   )
 }
 
-export const DropdownContent: React.FC<DropdownContentProps> = ({ children, open, align = 'right', className = '' }) => {
+export function DropdownContent({ children, open, align = 'right', className = '' }: DropdownContentProps): React.ReactElement | null {
   if (!open) return null
 
   const alignmentClasses: Record<string, string> = {
@@ -100,7 +100,7 @@ export const DropdownContent: React.FC<DropdownContentProps> = ({ children, open
   )
 }
 
-export const DropdownSection: React.FC<DropdownSectionProps> = ({ children, className = '' }) => {
+export function DropdownSection({ children, className = '' }: DropdownSectionProps): React.ReactElement {
   return (
     <div className={`border-b border-gray-200 last:border-b-0 ${className}`}>
       {children}
@@ -108,7 +108,7 @@ export const DropdownSection: React.FC<DropdownSectionProps> = ({ children, clas
   )
 }
 
-export const DropdownItem: React.FC<DropdownItemProps> = ({ children, onClick, className = '' }) => {
+export function DropdownItem({ children, onClick, className = '' }: DropdownItemProps): React.ReactElement {
   return (
     <button
       onClick={onClick}
@@ -119,7 +119,7 @@ export const DropdownItem: React.FC<DropdownItemProps> = ({ children, onClick, c
   )
 }
 
-export const DropdownSearch: React.FC<DropdownSearchProps> = ({ placeholder = 'Type to filter...', value, onChange, className = '' }) => {
+export function DropdownSearch({ placeholder = 'Type to filter...', value, onChange, className = '' }: DropdownSearchProps): React.ReactElement {
   return (
     <div className={`relative p-4 ${className} bg-gray-200/50`}>
       <input
@@ -134,11 +134,11 @@ export const DropdownSearch: React.FC<DropdownSearchProps> = ({ placeholder = 'T
   )
 }
 
-export const DropdownListItem: React.FC<DropdownListItemProps> = ({ icon, iconBg = 'bg-blue-500', children, onClick, className = '' }) => {
+export function DropdownListItem({ icon, iconBg = 'bg-blue-500', children, onClick, className = '' }: DropdownListItemProps): React.ReactElement {
   return (
     <button
       onClick={onClick}
-      className={`cursor-pointer w-full px-4 py-2 flex items-center gap-3 text-left hover:bg-gray-50 transition-colors ${className}`}
+      className={`cursor-pointer w-full px-4 py-2 flex items-center gap-3 text-left text-sm hover:bg-gray-50 transition-colors ${className}`}
     >
       {icon && (
         <div className={`w-8 h-8 ${iconBg} rounded-sm text-white font-bold flex items-center justify-center text-sm flex-shrink-0`}>

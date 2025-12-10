@@ -36,25 +36,25 @@ export const mainNav: Array<Nav> = [
 
 export const settingsNav: Record<string, Array<Nav>> = {
   Organisation: [
-    { path: '#', label: 'Manage', icon: faClone },
-    { path: '#', label: 'Users', icon: faClone },
-    { path: '#', label: 'Tags', icon: faClone },
+    { path: '/manage', label: 'Manage', icon: faClone },
+    { path: '/users', label: 'Users', icon: faClone },
+    { path: '/tags', label: 'Tags', icon: faClone },
     { path: '/settings/integrations', label: 'Integrations', icon: faClone },
   ],
   Utilities: [
-    { path: '#', label: 'Configuration', icon: faSun },
-    { path: '#', label: 'Heirarchy', icon: faChartBar },
-    { path: '#', label: 'Assets', icon: faBuilding },
+    { path: '/configuration', label: 'Configuration', icon: faSun },
+    { path: '/heirarchy', label: 'Heirarchy', icon: faChartBar },
+    { path: '/assets', label: 'Assets', icon: faBuilding },
   ],
   Carbon: [
-    { path: '#', label: 'Configuration', icon: faSun },
-    { path: '#', label: 'Heirarchy', icon: faChartBar },
-    { path: '#', label: 'Inventory Items', icon: faRectangleList },
-    { path: '#', label: 'Emission Factors', icon: faCloud },
-    { path: '#', label: 'Snapshots', icon: faCamera, disabled: true },
+    { path: '/configuration', label: 'Configuration', icon: faSun },
+    { path: '/heirarchy', label: 'Heirarchy', icon: faChartBar },
+    { path: '/inventory-items', label: 'Inventory Items', icon: faRectangleList },
+    { path: '/emission-factors', label: 'Emission Factors', icon: faCloud },
+    { path: '/snapshots', label: 'Snapshots', icon: faCamera, disabled: true },
   ],
   Displays: [
-    { path: '#', label: 'Manage', icon: faEye },
+    { path: '/manage', label: 'Manage', icon: faEye },
   ],
 }
 
