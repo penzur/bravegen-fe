@@ -24,7 +24,7 @@ export interface Nav {
   disabled?: boolean
 }
 
-export const mainNav = [
+export const mainNav: Array<Nav> = [
   { path: "/", label: 'Insights', icon: faCompass },
   { path: "/collect", label: 'Collect', icon: faFolderOpen },
   { path: "/reviews", label: 'Reviews', icon: faThumbsUp },
@@ -34,7 +34,7 @@ export const mainNav = [
   { path: "/actions", label: 'Actions', icon: faClipboard },
 ]
 
-export const settingsNav = {
+export const settingsNav: Record<string, Array<Nav>> = {
   Organisation: [
     { path: '#', label: 'Manage', icon: faClone },
     { path: '#', label: 'Users', icon: faClone },

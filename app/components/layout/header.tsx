@@ -9,19 +9,16 @@ import {
   faMagnifyingGlass,
 } from '@fortawesome/free-solid-svg-icons'
 import { getActiveNav, type Nav } from '~/config/nav'
+import AccountMenu from '../account-menu'
+import TenantMenu from '../tenant-menu'
 
 export default function Header() {
   const location = useLocation()
   const activeNav = getActiveNav(location.pathname)
 
   return <header className="flex justify-between gap-8 bg-white px-8 py-4 border-b-2 border-b-[#EEEEEE]">
-    <div className="w-[200px]">
-      <button
-        className="border border-gray-300 border-box cursor-pointer flex text-sm text-[#4A4A4A] justify-between items-center w-full h-full px-3 rounded hover:text-black hover:border-gray-400"
-      >
-        <span>ABC Group Ltd </span>
-        <FAIcon icon={faCircleDown} />
-      </button>
+    <div className="w-[256px]">
+      <TenantMenu />
     </div>
 
     <div className="flex items-center gap-1 flex-1 font-medium">
@@ -40,9 +37,7 @@ export default function Header() {
       <button className="p-2 bg-gray-200 rounded-full text-xs relative cursor-pointer hover:bg-gray-300/80">
         <FAIcon icon={faQuestion} />
       </button>
-      <button className="p-2 bg-[#3B82F6] rounded text-sm text-white relative cursor-pointer font-medium hover:bg-[#3B82F6]/80">
-        <span>JA</span>
-      </button>
+      <AccountMenu />
     </div>
   </header>
 }
