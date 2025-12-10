@@ -36,7 +36,7 @@ export function TableRow({ children, className = '' }: { children: React.ReactNo
 
 export function TableHead({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <th className={`px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider ${className}`}>
+    <th className={`px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider ${className}`}>
       {children}
     </th>
   )
