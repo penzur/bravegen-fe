@@ -11,11 +11,15 @@ import { getActiveNav } from '~/config/nav'
 import AccountMenu from '../account-menu'
 import TenantMenu from '../tenant-menu'
 
-export default function Header() {
+export default function Header({
+  className,
+}: {
+  className?: string,
+}) {
   const location = useLocation()
   const activeNav = getActiveNav(location.pathname)
 
-  return <header className="flex justify-between gap-8 bg-white px-8 py-4 border-b-2 border-b-[#EEEEEE]">
+  return <header className={`flex justify-between gap-8 bg-white px-8 py-4 border-b-2 border-b-[#EEEEEE] ${className}`}>
     <div className="w-[256px]">
       <TenantMenu />
     </div>
